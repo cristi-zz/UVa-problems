@@ -7,16 +7,18 @@ int cycle(int n);
 int main()
 {
 
-    int i,j,tmp;
-    while(scanf("%d %d\n",&i,&j)==2)
+    int iOrig,jOrig,tmp,i,j;
+    while(scanf("%d %d\n",&iOrig,&jOrig)==2)
     {
+        i = iOrig;
+        j = jOrig;
         if(i>j){
             tmp = j;
             j = i;
-            i = j;
+            i = tmp;
         }
         int max = calculate(i,j);
-        printf("%d %d %d\n",i,j,max);
+        printf("%d %d %d\n",iOrig,jOrig,max);
     }
 
     return 0;
